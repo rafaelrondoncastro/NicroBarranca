@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_actividades"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    tools:context="com.oneapp.Mantenimiento.Actividades"
+    android:orientation="vertical"
+    android:background="@drawable/fondoseleccion">
+
+    <TextView
+        android:id="@+id/textoip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorblanco"
+        android:textSize="12sp"/>
+    <EditText
+        android:id="@+id/txtIp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorblanco" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="8"
+        >
+        <TextView
+            android:id="@+id/nombre"
+            android:layout_width="0dp"
+            android:layout_weight="7"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:textColor="@color/colorblanco"/>
+        <Button
+            android:id="@+id/Ip"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/ip"
+            android:textSize="20sp"
+            android:textColor="@color/colorblanco"
+            android:background="@android:color/transparent"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/InspDiaria"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/inspecciondiaria"
+        android:background="@drawable/botones"
+        android:layout_marginTop="10dp"
+        android:textSize="17sp"
+        android:textColor="@color/colorblanco"/>
+
+    <Button
+        android:id="@+id/CierreDia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/cierredia"
+        android:background="@drawable/botones"
+        android:layout_marginTop="10dp"
+        android:textSize="17sp"
+        android:textColor="@color/colorblanco"/>
+
+    <Button
+        android:id="@+id/GeneraOTM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/solotm"
+        android:background="@drawable/botones"
+        android:textSize="17sp"
+        android:textColor="@color/colorblanco"/>
+    <Button
+        android:id="@+id/EjecutaOTM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/ejecutaOTM"
+        android:background="@drawable/botones"
+        android:textSize="17sp"
+        android:textColor="@color/colorblanco"/>
+
+    <Button
+        android:id="@+id/manten"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/mantenimientos"
+        android:background="@drawable/botones"
+        android:textSize="17sp"
+        android:textColor="@color/colorblanco"/>
+
+    <Button
+        android:id="@+id/Cronograma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/cronograma"
+        android:background="@drawable/botones"
+        android:textSize="17sp"
+        android:textColor="@color/colorblanco"/>
+
+    <TextView
+        android:id="@+id/infocal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/idevent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"/>
+</LinearLayout>

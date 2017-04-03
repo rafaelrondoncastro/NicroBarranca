@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "894965482608",
+    "firebase_url": "https://nicrobarranca-66f0f.firebaseio.com",
+    "project_id": "nicrobarranca-66f0f",
+    "storage_bucket": "nicrobarranca-66f0f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:894965482608:android:c480f37574df337b",
+        "android_client_info": {
+          "package_name": "com.oneapp.Mantenimiento"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "894965482608-b4r8ljmebgbfjal3avausn1hc75b8ujc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEIed1bNgEw9aNt0JltDkn5um2WejpOK4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

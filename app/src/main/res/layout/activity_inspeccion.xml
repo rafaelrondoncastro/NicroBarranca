@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_inspeccion"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.oneapp.Mantenimiento.Inspeccion"
+    android:orientation="vertical"
+    android:background="@drawable/fondoinspeccion"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorblanco"
+        android:text="@string/Estado"
+        android:textSize="20sp"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RadioButton
+            android:text="@string/sininconvenientes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sininconv"
+            android:textSize="15sp"
+            android:onClick="estadoequipo"
+            android:textColor="@color/colorblanco"
+            android:buttonTint="@color/colorblanco"
+            />
+
+        <RadioButton
+            android:text="@string/coninconvenientes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/coninconv"
+            android:textSize="15sp"
+            android:textColor="@color/colorblanco"
+            android:layout_weight="1"
+            android:checked="false"
+            android:onClick="estadoequipo"
+            android:buttonTint="@color/colorblanco"/>
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:id="@+id/Laydescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/descripcion"
+            android:textSize="20sp"
+            android:textColor="@color/colorblanco"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <RadioButton
+                android:id="@+id/existente"
+                android:text="@string/existente"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:textColor="@color/colorblanco"
+                android:layout_weight="1"
+                android:onClick="efecto"
+                android:buttonTint="@color/colorblanco"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/nuevo"
+                android:text="@string/nuevo"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"
+                android:onClick="efecto"
+                android:textColor="@color/colorblanco"
+                android:buttonTint="@color/colorblanco"
+                />
+        </RadioGroup>
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Fallos"
+            android:background="@drawable/spinner"
+            android:popupBackground="@color/grisoscuro"/>
+        <EditText
+            android:id="@+id/txtFallos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorblanco"
+            android:hint="@string/escribaelefectopresentado"
+            android:textColorHint="@color/colorfondo"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Laysolu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginTop="15dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sesoluciono"
+            android:textSize="20sp"
+            android:textColor="@color/colorblanco"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RadioButton
+                android:text="@string/si"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/sisolu"
+                android:textSize="15sp"
+                android:layout_weight="1"
+                android:checked="false"
+                android:onClick="solu"
+                android:textColor="@color/colorblanco"
+                android:buttonTint="@color/colorblanco"/>
+
+            <RadioButton
+                android:text="@string/no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/nosolu"
+                android:textSize="15sp"
+                android:layout_weight="1"
+                android:onClick="solu"
+                android:textColor="@color/colorblanco"
+                android:buttonTint="@color/colorblanco"/>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Laytrabaja"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sepuedetrabajar"
+            android:textSize="20sp"
+            android:textColor="@color/colorblanco"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RadioButton
+                android:text="@string/si"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/sitrabaja"
+                android:textSize="15sp"
+                android:layout_weight="1"
+                android:checked="false"
+                android:onClick="trabaja"
+                android:textColor="@color/colorblanco"
+                android:buttonTint="@color/colorblanco"/>
+
+            <RadioButton
+                android:text="@string/no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/notrabaja"
+                android:textSize="15sp"
+                android:layout_weight="1"
+                android:onClick="trabaja"
+                android:textColor="@color/colorblanco"
+                android:buttonTint="@color/colorblanco"/>
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Layotm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_marginTop="15dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/generaotm"
+            android:textSize="20sp"
+            android:textColor="@color/colorblanco"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" >
+
+            <RadioButton
+                android:text="@string/no"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/nootm"
+                android:textSize="15sp"
+                android:layout_weight="1"
+                android:checked="false"
+                android:onClick="otm"
+                android:textColor="@color/colorblanco"
+                android:buttonTint="@color/colorblanco"/>
+
+            <RadioButton
+                android:text="@string/si"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/siotm"
+                android:textSize="15sp"
+                android:layout_weight="1"
+                android:onClick="otm"
+                android:textColor="@color/colorblanco"
+                android:buttonTint="@color/colorblanco"/>
+        </RadioGroup>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/guardarinsp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/guardarinsp"
+        android:textSize="20sp"
+        android:background="@drawable/botones"
+        android:textColor="@color/colorblanco"
+        android:layout_marginTop="10dp"/>
+</LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

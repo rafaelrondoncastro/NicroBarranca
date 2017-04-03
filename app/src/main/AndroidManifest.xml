@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.oneapp.Mantenimiento">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/icono"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ingreso">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".auditoria" />
+        <activity android:name=".Equipos" />
+        <activity android:name=".Actividades" />
+        <activity android:name=".Inspeccion" />
+        <activity android:name=".Otm" />
+        <activity android:name=".AveriasOTM" />
+        <activity android:name=".Alarmas" />
+        <activity android:name=".MisOtm" />
+        <activity android:name=".Ejecutaotm" />
+        <activity android:name=".InsumosOTM" />
+        <activity android:name=".Prueba" />
+        <activity android:name=".Mantenimientos" />
+        <activity android:name=".ListMant" />
+        <activity android:name=".Cierredia" />
+        <activity android:name=".Tareas"></activity>
+    </application>
+
+</manifest>

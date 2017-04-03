@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_ejecutaotm"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.oneapp.Mantenimiento.Ejecutaotm"
+    android:orientation="vertical"
+    android:background="@drawable/fondoejecutaotm">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/controlesrealizados"
+                android:textSize="20sp"
+                android:textColor="@color/colorblanco"/>
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:orientation="vertical">
+
+                    <ListView
+                        android:id="@+id/cargalista"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp">
+                    </ListView>
+
+                </LinearLayout>
+            </ScrollView>
+
+            <Button
+                android:id="@+id/inInsumo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/ingresarinsumos"
+                android:textSize="20sp"
+                android:background="@drawable/botones"
+                android:textColor="@color/colorblanco"/>
+
+            <TextView
+                android:id="@+id/txtcosto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/costoMano"
+                android:layout_marginTop="5dp"
+                android:textSize="20dp"
+                android:textColor="@color/colorblanco"/>
+            <LinearLayout
+                android:id="@+id/laycosto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="8">
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:src="@drawable/signopeso"
+                    />
+                <EditText
+                    android:id="@+id/CostMano"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="7"
+                    android:textColor="@color/colorblanco"
+                    android:inputType="number"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtsol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorblanco"
+                android:text="@string/solu"
+                android:textSize="20sp"/>
+            <EditText
+                android:id="@+id/solucion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="@color/colorblanco"
+                android:inputType="text"/>
+            <Button
+                android:id="@+id/enviarotmejecutada"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/enviardatos"
+                android:textSize="20sp"
+                android:textColor="@color/colorblanco"
+                android:background="@drawable/botones"/>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
